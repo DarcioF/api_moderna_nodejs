@@ -166,7 +166,8 @@ module.exports = {
 ```
 ## Criando o model Customer
 
-Para a criação da tabela Customer vamos abrir o terminal:
+- Primeiro vamos criar uma diretorio "app/models"
+- Para a criação da tabela Customer vamos abrir o terminal:
 
 ```cmd
 npx sequelize-cli model:generate --name Customers --attributes nome:string,sobrenome:string,email:string
