@@ -323,6 +323,10 @@ const Customers = require("../app/models/Customers");
         return res.status(status).json();
     }
 ```
+- E por fim, vamos subir nosso servidor
+```cmd
+ npx nodemon ./src/server.js
+```
 - Pronto, finalizamos nossa API ...
 
 Documentação do sequelize query disponível :https://sequelize.org/v3/docs/querying/
