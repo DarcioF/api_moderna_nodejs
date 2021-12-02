@@ -256,7 +256,7 @@ module.exports = routes;
 Vamos implementar o nosso controller de customers:
 - Primeiro vamos importar o nosso model Customers no arquivo "src/app/controllers/CustomersController.js":
 ```javascript
-const Customers = require("../app/models/Customers");
+const Customers = require("../models/Customers");
 
 ```
 - Precisamos retornar uma lista de customers no metódo "index" no arquivo "src/app/controllers/CustomersController.js":
