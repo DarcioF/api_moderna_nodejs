@@ -254,7 +254,12 @@ module.exports = routes;
 
 
 Vamos implementar o nosso controller de customers:
-- Primeiro precisamos retornar uma lista de customers no metódo "index" no arquivo "src/app/controllers/CustomersController.js":
+- Primeiro vamos importar o nosso model Customers no arquivo "src/app/controllers/CustomersController.js":
+```javascript
+const Customers = require("../app/models/Customers");
+
+```
+- Precisamos retornar uma lista de customers no metódo "index" no arquivo "src/app/controllers/CustomersController.js":
 
 ```javascript
   async index(req, res) {
