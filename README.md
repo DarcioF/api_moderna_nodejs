@@ -166,7 +166,8 @@ module.exports = {
 ```
 ## Criando o model Customer
 
-Para a criação da tabela Customer vamos abrir o terminal:
+- Primeiro vamos criar uma diretorio "app/models"
+- Para a criação da tabela Customer vamos abrir o terminal:
 
 ```cmd
 npx sequelize-cli model:generate --name Customers --attributes nome:string,sobrenome:string,email:string
@@ -253,7 +254,12 @@ module.exports = routes;
 
 
 Vamos implementar o nosso controller de customers:
-- Primeiro precisamos retornar uma lista de customers no metódo "index" no arquivo "src/app/controllers/CustomersController.js":
+- Primeiro vamos importar o nosso model Customers no arquivo "src/app/controllers/CustomersController.js":
+```javascript
+const Customers = require("../models/Customers");
+
+```
+- Precisamos retornar uma lista de customers no metódo "index" no arquivo "src/app/controllers/CustomersController.js":
 
 ```javascript
   async index(req, res) {
@@ -316,6 +322,10 @@ Vamos implementar o nosso controller de customers:
         await customer.destroy();
         return res.status(status).json();
     }
+```
+- E por fim, vamos subir nosso servidor
+```cmd
+ npx nodemon ./src/server.js
 ```
 - Pronto, finalizamos nossa API ...
 
