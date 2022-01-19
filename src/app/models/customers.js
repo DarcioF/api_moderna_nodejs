@@ -8,6 +8,7 @@ class Customers extends Model {
         nome: Sequelize.STRING,
         sobrenome: Sequelize.STRING,
         email: Sequelize.STRING,
+        url_file: Sequelize.STRING,
       },
       {
         sequelize,
